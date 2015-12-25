@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MimeTool", "MimeTool\MimeTool.csproj", "{B72033F9-4BEF-4137-B454-72D64AD0F6F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TnefTool", "TnefTool\TnefTool.csproj", "{31BB4514-E62D-48F1-B583-BCDB732F60F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tester", "Tester\Tester.csproj", "{E7102EF1-EA74-434D-928B-CC60AE9D8C93}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B72033F9-4BEF-4137-B454-72D64AD0F6F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B72033F9-4BEF-4137-B454-72D64AD0F6F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B72033F9-4BEF-4137-B454-72D64AD0F6F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B72033F9-4BEF-4137-B454-72D64AD0F6F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31BB4514-E62D-48F1-B583-BCDB732F60F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31BB4514-E62D-48F1-B583-BCDB732F60F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31BB4514-E62D-48F1-B583-BCDB732F60F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31BB4514-E62D-48F1-B583-BCDB732F60F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7102EF1-EA74-434D-928B-CC60AE9D8C93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7102EF1-EA74-434D-928B-CC60AE9D8C93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7102EF1-EA74-434D-928B-CC60AE9D8C93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7102EF1-EA74-434D-928B-CC60AE9D8C93}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
