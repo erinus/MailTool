@@ -33,9 +33,19 @@ namespace MimeTool
 				result = "x-cp50227";
 			}
 
-			if (result.Equals("cp1252"))
+			if (result.Equals("cp-850"))
 			{
-				result = "Windows-1252";
+				result = "ibm850";
+			}
+
+			if (result.Equals("cp932"))
+			{
+				result = "x-ms-cp932";
+			}
+
+			if (result.Equals("cp936"))
+			{
+				result = "gb2312";
 			}
 
 			if (result.Equals("cp1251"))
@@ -43,14 +53,14 @@ namespace MimeTool
 				result = "Windows-1251";
 			}
 
-			if (result.Equals("cp-850"))
+			if (result.Equals("cp1252"))
 			{
-				result = "ibm850";
+				result = "Windows-1252";
 			}
 
-			if (result.Equals("cp936"))
+			if (result.Equals("cp1254"))
 			{
-				result = "gb2312";
+				result = "Windows-1254";
 			}
 
 			if (result.Equals("binary"))

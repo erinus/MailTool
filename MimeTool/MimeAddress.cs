@@ -44,6 +44,24 @@ namespace MimeTool
 					return;
 				}
 
+				find = Regex.Match(parts[0], @"^=\?(?<charset>.+?)\?(?<encoding>.)\?(?<encoded>.+)", RegexOptions.IgnoreCase);
+
+				if (find.Success)
+				{
+					String text;
+
+					text = find.Groups[0].Value.Trim();
+
+					if (!text.EndsWith("?="))
+					{
+						text = String.Format("{0}?=", text);
+					}
+
+					this.Display = Util.DecodeString(text);
+
+					return;
+				}
+
 				find = Regex.Match(parts[0], @"^<*.+@.+>*$", RegexOptions.IgnoreCase);
 
 				if (find.Success)

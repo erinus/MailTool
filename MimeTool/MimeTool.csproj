@@ -55,6 +55,7 @@
     <Compile Include="MimeContentType.cs" />
     <Compile Include="MimeEntity.cs" />
     <Compile Include="MimeHeader.cs" />
+    <Compile Include="MimePartCollection.cs" />
     <Compile Include="MimeHeaderCollection.cs" />
     <Compile Include="MimeFolder.cs" />
     <Compile Include="MimeMessage.cs" />

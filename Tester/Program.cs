@@ -493,6 +493,11 @@ namespace Tester
 					//		message.RawBody.Count
 					//	)
 					//);
+
+					using (FileStream steam = new FileStream(String.Format(@"{0}\{1}.new.eml", dsub.FullName, Path.GetFileNameWithoutExtension(feml.Name)), FileMode.OpenOrCreate))
+					{
+						mime.Save(steam);
+					}
 				}
 			}
 		}
