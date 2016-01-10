@@ -24,6 +24,10 @@ namespace MimeTool
 			{
 				Match find;
 
+				Boolean address = false;
+
+				Boolean dispaly = false;
+
 				find = Regex.Match(parts[0], @"^[""']+(?<name>.+)['""]+$", RegexOptions.IgnoreCase);
 
 				if (find.Success)
@@ -31,15 +35,8 @@ namespace MimeTool
 					String text;
 
 					text = find.Groups["name"].Value.Trim();
-
-					if (Regex.IsMatch(text, @".+@.+"))
-					{
-						this.Address = text;
-					}
-					else
-					{
-						this.Display = text;
-					}
+					
+					this.Display = text;
 
 					return;
 				}

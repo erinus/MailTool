@@ -184,9 +184,19 @@ namespace MimeTool
 
 				String.Format(
 
-					@"Subject: =?UTF-8?B?{0}?=",
+					@"Subject: {0}",
 
-					Convert.ToBase64String(Encoding.UTF8.GetBytes(this.Subject))
+					String.IsNullOrEmpty(this.Subject) ?
+
+						String.Empty :
+
+						String.Format(
+
+							"=?UTF-8?B?{0}?=",
+
+							Convert.ToBase64String(Encoding.UTF8.GetBytes(this.Subject))
+
+						)
 
 				)
 
@@ -202,11 +212,29 @@ namespace MimeTool
 
 					String.Format(
 
-						@"=?UTF-8?B?{0}?= <{1}>",
+						@"{0}{1}",
 
-						Convert.ToBase64String(Encoding.UTF8.GetBytes(address.Display)),
+						String.IsNullOrEmpty(address.Display) ?
 
-						address.Address
+							String.Empty :
+
+							Regex.IsMatch(address.Display, @"^\p{IsBasicLatin}+$") ?
+
+								String.Format(@"""{0}""", address.Display) :
+
+								String.Format(
+
+									"=?UTF-8?B?{0}?=",
+
+									Convert.ToBase64String(Encoding.UTF8.GetBytes(address.Display))
+
+								),
+
+						String.IsNullOrEmpty(address.Address) ?
+
+							String.Empty :
+
+							String.Format(" <{0}>", address.Address)
 
 					)
 
@@ -223,11 +251,29 @@ namespace MimeTool
 
 					String.Format(
 
-						@"=?UTF-8?B?{0}?= <{1}>",
+						@"{0}{1}",
 
-						Convert.ToBase64String(Encoding.UTF8.GetBytes(address.Display)),
+						String.IsNullOrEmpty(address.Display) ?
 
-						address.Address
+							String.Empty :
+
+							Regex.IsMatch(address.Display, @"^\p{IsBasicLatin}+$") ?
+
+								String.Format(@"""{0}""", address.Display) :
+
+								String.Format(
+
+									"=?UTF-8?B?{0}?=",
+
+									Convert.ToBase64String(Encoding.UTF8.GetBytes(address.Display))
+
+								),
+
+						String.IsNullOrEmpty(address.Address) ?
+
+							String.Empty :
+
+							String.Format(" <{0}>", address.Address)
 
 					)
 
@@ -244,11 +290,29 @@ namespace MimeTool
 
 					String.Format(
 
-						@"=?UTF-8?B?{0}?= <{1}>",
+						@"{0}{1}",
 
-						Convert.ToBase64String(Encoding.UTF8.GetBytes(address.Display)),
+						String.IsNullOrEmpty(address.Display) ?
 
-						address.Address
+							String.Empty :
+
+							Regex.IsMatch(address.Display, @"^\p{IsBasicLatin}+$") ?
+
+								String.Format(@"""{0}""", address.Display) :
+
+								String.Format(
+
+									"=?UTF-8?B?{0}?=",
+
+									Convert.ToBase64String(Encoding.UTF8.GetBytes(address.Display))
+
+								),
+
+						String.IsNullOrEmpty(address.Address) ?
+
+							String.Empty :
+
+							String.Format(" <{0}>", address.Address)
 
 					)
 
@@ -265,11 +329,29 @@ namespace MimeTool
 
 					String.Format(
 
-						@"=?UTF-8?B?{0}?= <{1}>",
+						@"{0}{1}",
 
-						Convert.ToBase64String(Encoding.UTF8.GetBytes(address.Display)),
+						String.IsNullOrEmpty(address.Display) ?
 
-						address.Address
+							String.Empty :
+
+							Regex.IsMatch(address.Display, @"^\p{IsBasicLatin}+$") ?
+
+								String.Format(@"""{0}""", address.Display) :
+
+								String.Format(
+
+									"=?UTF-8?B?{0}?=",
+
+									Convert.ToBase64String(Encoding.UTF8.GetBytes(address.Display))
+
+								),
+
+						String.IsNullOrEmpty(address.Address) ?
+
+							String.Empty :
+
+							String.Format(" <{0}>", address.Address)
 
 					)
 
